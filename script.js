@@ -1,22 +1,59 @@
-let isDis = false;
-function search () {
-    isDis = !isDis;
-    if (isDis === true){
-document.getElementById('input').classList.remove('d-none');
-        document.getElementById('button').innerHTML = '&#x2715;';
+let isDisMobile = false;
+function searchMobile () {
+    isDisMobile = !isDisMobile;
+    if (isDisMobile === true){
+        document.getElementById('input_mobile').classList.remove('d-none');
+        document.getElementById('button_mobile').innerHTML = '&#x2715;';
 
     }
     else {
+        document.getElementById('input_mobile').classList.add('d-none');
+        document.getElementById('button_mobile').innerHTML = '<img width="20px" src="image/search.png" alt="">';
+    }
+}
+
+let isDis = false;
+
+function search() {
+    isDis = !isDis;
+    if (isDis === true) {
+        document.getElementById('input').classList.remove('d-none');
+        document.getElementById('button').innerHTML = '&#x2715;';
+
+    } else {
         document.getElementById('input').classList.add('d-none');
         document.getElementById('button').innerHTML = '<img width="20px" src="image/search.png" alt="">';
     }
 }
 
+let mobile_is = false;
+
+function mobile_toggle () {
+    mobile_is = !mobile_is;
+    if (mobile_is === true) {
+        document.getElementById('toggle').innerHTML = '<img class="p-1" width="30px" src="image/img_3.png" alt="">';
+        document.getElementById('mobile_items').classList.remove('d-none');
+        document.getElementById('mobile_items').classList.add('d-flex');
+    } else {
+        document.getElementById('toggle').innerHTML = '<img class="p-1" width="30px" src="image/img.png" alt="">';
+        document.getElementById('mobile_items').classList.add('d-none');
+        document.getElementById('mobile_items').classList.remove('d-flex');
+
+    }
+}
+
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 20,
+        time: 1500
+    })
+})
+
 $('.owl-carousel').owlCarousel({
     loop:true,
     animateOut: 'fadeOut',
     margin:10,
-    autoplay: true,
+    autoplay: false,
     nav:true,
     items: 1,
     responsive:{
@@ -32,175 +69,103 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-function sliceSize(dataNum, dataTotal) {
-    return (dataNum / dataTotal) * 360;
-}
-function addSlice(sliceSize, pieElement, offset, sliceID, color) {
-    $(pieElement).append("<div class='slice "+sliceID+"'><span></span></div>");
-    var offset = offset - 1;
-    var sizeRotation = -179 + sliceSize;
-    $("."+sliceID).css({
-        "transform": "rotate("+offset+"deg) translate3d(0,0,0)"
-    });
-    $("."+sliceID+" span").css({
-        "transform"       : "rotate("+sizeRotation+"deg) translate3d(0,0,0)",
-        "background-color": color
-    });
-}
-function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
-    var sliceID = "s"+dataCount+"-"+sliceCount;
-    var maxSize = 179;
-    if(sliceSize<=maxSize) {
-        addSlice(sliceSize, pieElement, offset, sliceID, color);
-    } else {
-        addSlice(maxSize, pieElement, offset, sliceID, color);
-        iterateSlices(sliceSize-maxSize, pieElement, offset+maxSize, dataCount, sliceCount+1, color);
-    }
-}
-function createPie(dataElement, pieElement) {
-    var listData = [];
-    $(dataElement+" span").each(function() {
-        listData.push(Number($(this).html()));
-    });
-    var listTotal = 0;
-    for(var i=0; i<listData.length; i++) {
-        listTotal += listData[i];
-    }
-    var offset = 0;
-    var color = [
-        "cornflowerblue",
-        "olivedrab",
-        "orange",
-        "tomato",
-        "crimson",
-        "purple",
-        "turquoise",
-        "forestgreen",
-        "navy",
-        "gray"
-    ];
-    for(var i=0; i<listData.length; i++) {
-        var size = sliceSize(listData[i], listTotal);
-        iterateSlices(size, pieElement, offset, i, 0, color[i]);
-        $(dataElement+" li:nth-child("+(i+1)+")").css("border-color", color[i]);
-        offset += size;
-    }
-}
-createPie(".pieID.legend", ".pieID.pie");
 
 
+$('#carouselExample').on('slide.bs.carousel', function (e) {
 
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $('.carousel-item').length;
 
-
-var chart = AmCharts.makeChart("chartdiv", {
-    "type": "pie",
-    "startDuration": 0,
-    "theme": "light",
-    "addClassNames": true,
-    // "legend": {
-    //   "position": "right",
-    //   "marginRight": 100,
-    //   "autoMargins": false
-    // },
-    "innerRadius": "60%",
-    "defs": {
-        "filter": [{
-            "id": "shadow",
-            "width": "200%",
-            "height": "200%",
-            "feOffset": {
-                "result": "offOut",
-                "in": "SourceAlpha",
-                "dx": 0,
-                "dy": 0
-            },
-            "feGaussianBlur": {
-                "result": "blurOut",
-                "in": "offOut",
-                "stdDeviation": 5
-            },
-            "feBlend": {
-                "in": "SourceGraphic",
-                "in2": "blurOut",
-                "mode": "normal"
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
             }
-        }]
-    },
-    "dataProvider": [{
-        "country": "Lithuania",
-        "litres": 501.9
-    }, {
-        "country": "Czech Republic",
-        "litres": 301.9
-    }, {
-        "country": "Ireland",
-        "litres": 201.1
-    }, {
-        "country": "Germany",
-        "litres": 165.8
-    }, {
-        "country": "Australia",
-        "litres": 139.9
-    }, {
-        "country": "Austria",
-        "litres": 128.3
-    }, {
-        "country": "UK",
-        "litres": 99
-    }, {
-        "country": "Belgium",
-        "litres": 60
-    }, {
-        "country": "The Netherlands",
-        "litres": 50
-    }],
-    "valueField": "litres",
-    "titleField": "country",
-    "balloon": {
-        "fillAlpha": 0,
-        "borderAlpha": 0,
-        "shadowAlpha": 0,
-        "fixedPosition": true
-    },
-    "listeners": [{
-        "event": "changed",
-        "method": function(e) {
-            console.log(e.type);
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
         }
-    }],
-    "chartCursor": {
-
-    },
-    "export": {
-        "enabled": true
     }
 });
 
-chart.addListener("init", handleInit);
 
-chart.addListener("rollOverSlice", function(e) {
-    handleRollOver(e);
+
+// Developed at agap2
+// Based on:
+// http://www.codeply.com/go/s3I9ivCBYH/multi-carousel-single-slide-bootstrap-4
+
+$('.multi-item-carousel').on('slide.bs.carousel', function (e) {
+    let $e = $(e.relatedTarget),
+        itemsPerSlide = 3,
+        totalItems = $('.carousel-item', this).length,
+        $itemsContainer = $('.carousel-inner', this),
+        it = itemsPerSlide - (totalItems - $e.index());
+    if (it > 0) {
+        for (var i = 0; i < it; i++) {
+            $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
+                // append slides to the end/beginning
+                appendTo($itemsContainer);
+        }
+    }
 });
 
-function handleInit() {
-    chart.legend.addListener("rollOverItem", handleRollOver);
+
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
-function handleRollOver(e) {
-
-    var chart = e.chart,
-        radiusReal = chart.radiusReal,
-        innerRadius = parseInt(chart.innerRadius, 10) * 0.01,
-        marginTop = radiusReal * innerRadius;
-
-    $('.amcharts-balloon-div').css({
-        marginTop: marginTop * -1
-    });
-
-    var wedge = e.dataItem.wedge.node;
-    wedge.parentNode.appendChild(wedge);
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTo({top: 0, behavior: "smooth"}); // For Safari
+    document.documentElement.scrollTo({top: 0, behavior: "smooth"}); // For Chrome, Firefox, IE and Opera
 }
 
 
 
+var oilCanvas = document.getElementById("oilChart");
 
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 0;
+
+var oilData = {
+    labels: [
+        "Saudi Arabia",
+        "Russia",
+        "Iraq",
+        "United Arab Emirates",
+        "Canada",
+        "kjkjk"
+    ],
+    datasets: [
+        {
+            data: [90, 86.2, 52.2, 51.2, 50.2, 30],
+            backgroundColor: [
+                "#FF6384",
+                "#63FF84",
+                "#84FF63",
+                "#8463FF",
+                "#6384FF",
+                "#6384aa"
+            ],
+        }]
+};
+
+var pieChart = new Chart(oilCanvas, {
+    type: 'pie',
+    data: oilData
+});
