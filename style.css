@@ -48,7 +48,7 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 .input{
-    width: 30vw!important;
+    width: 450px!important;
 }
 @media (max-width: 992px) {
 .navbar-collapse {
@@ -608,7 +608,7 @@ footer {
         display: block!important;
     }
     .item p {
-        margin-top: 100px;
+        margin-top: 0px;
         width: unset;
     }
     .item h1 {
@@ -630,6 +630,9 @@ footer {
     }
     .btn_tolov {
         width: 300px!important;
+    }
+    .input {
+        width: 100% !important;
     }
 }
 
