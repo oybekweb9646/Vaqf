@@ -1,11 +1,27 @@
 .colornav {
     color: #3CB68A;
 }
+.navbar ul li a h4{
+    font-family: Roboto Condensed;
+}
+#mobile_items ul li a h4{
+    font-family: Roboto Condensed;
+}
+h1{
+    font-family: Roboto Condensed;
+}
+p{
+    font-family: Roboto;
+}
+button{
+    font-weight: bold;
+}
 .headerFooter {
     flex-direction: unset!important;
 }
 .colornavbg {
  background-color: #3CB68A;
+    font-weight: bold;
 }
 .card_img{
     width: 100%;
@@ -75,7 +91,7 @@
     font-weight: bold;
     color: #FFFFFF;
     font-size: 16vh!important;
-    line-height: 90px;
+    line-height: 5vw;
     width: 77%!important;
 }
 .item p {
@@ -598,7 +614,14 @@ footer {
 .proactive{
     background-color: #0C2F2B;
 }
-
+#mobile_items{
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    padding: 8vw;
+}
 @media (max-width: 768px) {
 .footer {
     display: none;
@@ -614,6 +637,7 @@ footer {
     .item h1 {
         font-size: 10vw!important;
         line-height: unset;
+        width: 100% !important;
     }
     .owl-button{
         margin-top: 0!important;
@@ -633,6 +657,20 @@ footer {
     }
     .input {
         width: 100% !important;
+    }
+    .button_mob{
+        text-align: center;
+    }
+
+    .bordercar img {
+        max-width: 160px;
+    }
+
+}
+@media (max-width: 992px) {
+
+    .videoplay {
+        top: calc(50% - 110px) !important;
     }
 }
 
