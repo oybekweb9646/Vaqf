@@ -20,8 +20,24 @@ button{
     flex-direction: unset!important;
 }
 .colornavbg {
- background-color: #3CB68A;
+    background: #3CB68A;
     font-weight: bold;
+    padding: 12px 26px;
+    border-radius: 10px;
+}
+.colornavbg1 {
+    background: #3CB68A;
+    font-weight: bold;
+}
+.button_hover{
+    border-radius: 15px;
+    padding: 3px;
+    outline: none!important;
+    border: 4px solid transparent;
+    width: 170px;
+}
+.button_hover:hover{
+    border: 4px solid #3CB68A;
 }
 .card_img{
     width: 100%;
@@ -668,7 +684,6 @@ footer {
 
 }
 @media (max-width: 992px) {
-
     .videoplay {
         top: calc(50% - 110px) !important;
     }
