@@ -148,14 +148,17 @@ var oilData = {
 var pieChart = new Chart(oilCanvas, {
     type: 'pie',
     data: oilData,
+    responsive: true,
     options: {
+        responsive: true,
         legend: {
             display: false,
-            position: "bottom",
+            responsive: true,
+            position: "right",
             labels: {
                 fontColor: "#333",
                 fontSize: 20,
-                padding: 50,
+                paddingTop: 50,
             }},
     }
 }

@@ -19,11 +19,25 @@ button{
 .headerFooter {
     flex-direction: unset!important;
 }
-.colornavbg {
-    background: #3CB68A;
-    font-weight: bold;
-    padding: 12px 26px;
-    border-radius: 10px;
+
+.scroll{
+    border: 5px solid transparent!important;
+    padding: 3px!important;
+    background-color: transparent!important;
+
+}
+.scroll:hover{
+    border: 5px solid #3CB68A!important;
+}
+.scroldiv {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3CB68A!important;
+    font-size: 27px ;
 }
 .colornavbg1 {
     background: #3CB68A;
@@ -43,12 +57,19 @@ button{
     border: 4px solid transparent;
     width: 380px;
 }
-.button_hover:hover{
-    border: 4px solid #3CB68A;
+.colornavbg {
+    background: #3CB68A;
+    font-weight: bold;
+    padding: 12px 26px;
+    border-radius: 10px;
 }
 .button_hover1:hover{
     border: 4px solid #3CB68A;
 }
+.button_hover:hover{
+    border: 4px solid #3CB68A;
+}
+
 .card_img{
     width: 100%;
 }
