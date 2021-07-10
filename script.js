@@ -71,26 +71,6 @@ $('.owl-carousel').owlCarousel({
 
 
 
-$('#carouselExample').on('slide.bs.carousel', function (e) {
-
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 3;
-    var totalItems = $('.carousel-item').length;
-
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
-});
 
 
 
@@ -139,8 +119,8 @@ function topFunction() {
 
 var oilCanvas = document.getElementById("oilChart");
 
-Chart.defaults.global.defaultFontFamily = "Lato";
-Chart.defaults.global.defaultFontSize = 0;
+
+
 
 var oilData = {
     labels: [
@@ -167,5 +147,16 @@ var oilData = {
 
 var pieChart = new Chart(oilCanvas, {
     type: 'pie',
-    data: oilData
-});
+    data: oilData,
+    options: {
+        legend: {
+            display: false,
+            position: "bottom",
+            labels: {
+                fontColor: "#333",
+                fontSize: 20,
+                padding: 50,
+            }},
+    }
+}
+);
