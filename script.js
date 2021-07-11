@@ -2,29 +2,53 @@ let isDisMobile = false;
 function searchMobile () {
     isDisMobile = !isDisMobile;
     if (isDisMobile === true){
-        document.getElementById('input_mobile').classList.remove('d-none');
+        // document.getElementById('input_mobile').classList.remove('d-none');
         document.getElementById('button_mobile').innerHTML = '&#x2715;';
-
+        document.getElementById("input").focus();
     }
     else {
+        document.getElementById("input").style.animationDuration = "3s";
+
         document.getElementById('input_mobile').classList.add('d-none');
         document.getElementById('button_mobile').innerHTML = '<img width="20px" src="image/search.png" alt="">';
     }
 }
+// const body = document.querySelector('body');
+// const searchBtn = document.querySelector('#search');
+// const searchInput = document.querySelector('#search-input');
+// let active = false;
+//
+// document.getElementById('search-btn').addEventListener('click', (e) => {
+//         if(!active) {
+//             searchBtn.classList.add('active');
+//             searchInput.classList.add('active');
+//             document.getElementById('search-btn').innerHTML = '&#x2715;';
+//             active = true;
+//             searchInput.focus();
+//         }
+//      else {
+//         searchBtn.classList.remove('active');
+//         searchInput.classList.remove('active');
+//             document.getElementById('search-btn').innerHTML = '<img width="20px" src="image/search.png" alt="">';
+//         searchInput.value = '';
+//         active = false;
+//     }
+// });
+//
 
-let isDis = false;
 
-function search() {
-    isDis = !isDis;
-    if (isDis === true) {
-        document.getElementById('input').classList.remove('d-none');
-        document.getElementById('button').innerHTML = '&#x2715;';
 
-    } else {
-        document.getElementById('input').classList.add('d-none');
-        document.getElementById('button').innerHTML = '<img width="20px" src="image/search.png" alt="">';
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
 
 let mobile_is = false;
 
@@ -135,18 +159,18 @@ var oilData = {
         {
             data: [90, 86.2, 52.2, 51.2, 50.2, 30],
             backgroundColor: [
-                "#FF6384",
-                "#63FF84",
-                "#84FF63",
-                "#8463FF",
-                "#6384FF",
-                "#6384aa"
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'rgb(255, 210, 132)',
+                'rgb(210, 162, 235)',
+                'rgb(255, 20, 86)'
             ],
         }]
 };
 
 var pieChart = new Chart(oilCanvas, {
-    type: 'pie',
+    type: 'doughnut',
     data: oilData,
     responsive: true,
     options: {

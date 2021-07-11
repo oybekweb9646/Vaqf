@@ -6,6 +6,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -16,8 +19,6 @@
 
 </head>
 <body>
-
-
 <section class="header">
     <div class="shadow">
         <nav class="navbar container navbar-expand-lg navbar-light p-0">
@@ -29,12 +30,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav align-items-center ml-auto">
-                    <input class='form-control d-none mainDrop mr-4 input' id="input" type="text"
-                           placeholder="Search...">
-                    <button class="btn bg-white mr-4 mainDrop" id="button" onclick="search()"><img width="20px" src="image/search.png" alt=""></button>
-                    <div class="dropdown mr-4 mainDrop">
+                    <div class="container search-input">
+                        <div>
+                            <input type="text" placeholder="Search...">
+                            <div class="search"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-4 main_drop">
                         <button type="button" class="btn dropdown-toggle bg-transparent" data-toggle="dropdown">
                             uz
                         </button>
@@ -45,11 +50,9 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn button_hover bg-transparent"><div class="colornavbg ml-auto text-white my-2 my-sm-0"
-                            >Xayriya qilish
-                    </div>
+                    <button type="submit" class="btn button_hover bg-transparent">
+                        <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Xayriya qilish</div>
                     </button>
-
                 </ul>
             </div>
         </nav>
@@ -58,33 +61,31 @@
         <div class="navbar navbar-expand">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Фонд хакида</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Хайрия акциялари</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Янгиликлар</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Янгиликлар</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Маколалар</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Маколалар</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Фотолар</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фотолар</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Видеолар</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Видеолар</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="colornav font-weight-bold ">Алока</h4></a>
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Алока</h4></a>
                 </li>
             </ul>
 
         </div>
     </div>
 </section>
-
-
 <section class="header_mobile d-none">
     <nav class="navbar container navbar-expand-lg navbar-light">
         <button id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
@@ -93,46 +94,44 @@
         <a class="navbar-brand p-0 d-flex align-items-center" href="#">
             <img width="200px" src="images/Logo.svg" alt="">
         </a>
-        <button class="btn bg-white mr-4 mainDrop" id="button_mobile" onclick="searchMobile()">
-            <img width="20px"
-                 src="image/search.png"
-                 alt=""></button>
-        <input class='form-control d-none mainDrop mr-4 mt-3 input' id="input_mobile" type="text"
-               placeholder="Search...">
+        <div class="container search-input">
+            <div>
+                <input type="text" placeholder="Search...">
+                <div class="search"></div>
+            </div>
+        </div>
     </nav>
     <div id="mobile_items" class="d-none container">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Фонд хакида</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фонд хакида</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Хайрия акциялари</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Хайрия акциялари</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Янгиликлар</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Янгиликлар</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Маколалар</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Маколалар</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Фотолар</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фотолар</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Видеолар</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Видеолар</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><h4 class="colornav font-weight-normal ">Алока</h4></a>
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Алока</h4></a>
             </li>
         </ul>
         <div class="ml-auto">
-            <button class="btn bg-white mr-4 mainDropMobile  d-block mt-2">UZ</button>
-            <button class="btn bg-white mr-4 mainDropMobile  d-block mt-2">RU</button>
-            <button class="btn bg-white mr-4 mainDropMobile  d-block mt-2">EN</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">UZ</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">RU</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">EN</button>
         </div>
     </div>
 </section>
-
-
 <section class="main">
     <div style="background-image: url('image/linevaqf.svg');height: 36px"></div>
     <div class="owl-carousel owl-theme">
@@ -143,7 +142,7 @@
                     рациональное мышление предопределяет высокую востребованность поставленных обществом задач.</p>
                 <div class="button_mob">
                     <button type="submit" class="btn button_hover bg-transparent">
-                        <div class="colornavbg ml-auto text-white my-2 my-sm-0">Batafsil</div>
+                        <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Batafsil</div>
                     </button>
                 </div>
             </div>
@@ -154,7 +153,7 @@
                 <p class="mb-5">Принимая во внимание показатели успешности, разбавленное изрядной долей эмпатии,
                     рациональное мышление предопределяет высокую востребованность поставленных обществом задач.</p>
                 <button type="submit" class="btn my-5 button_hover bg-transparent">
-                    <div class="colornavbg ml-auto text-white my-2 my-sm-0"
+                    <div class="color_back_btn ml-auto text-white my-2 my-sm-0"
                     >Batafsil
                     </div>
                 </button>
@@ -166,7 +165,7 @@
                 <p class="mb-5">Принимая во внимание показатели успешности, разбавленное изрядной долей эмпатии,
                     рациональное мышление предопределяет высокую востребованность поставленных обществом задач.</p>
                 <button type="submit" class="btn my-5 button_hover bg-transparent">
-                    <div class="colornavbg ml-auto text-white my-2 my-sm-0"
+                    <div class="color_back_btn ml-auto text-white my-2 my-sm-0"
                     >Batafsil
                     </div>
                 </button>
@@ -178,7 +177,7 @@
                 <p class="mb-5">Принимая во внимание показатели успешности, разбавленное изрядной долей эмпатии,
                     рациональное мышление предопределяет высокую востребованность поставленных обществом задач.</p>
                 <button type="submit" class="btn my-5 button_hover bg-transparent">
-                    <div class="colornavbg ml-auto text-white my-2 my-sm-0">Batafsil</div>
+                    <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Batafsil</div>
                 </button>
             </div>
         </div>
@@ -191,38 +190,38 @@
                 <div class="py-3 px-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                     <a href="#" style="text-decoration: none" class="text font-weight-bold "><img
                             src="images/zakot.svg" alt="">
-                        <p class="colornav mt-3 mb-0">Закот хисоблагич</p></a>
+                        <p class="color_text mt-3 mb-0">Закот хисоблагич</p></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mt-4 text-center">
                 <div class="py-3 px-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                     <a href="#" style="text-decoration: none" class="text font-weight-bold "><img
                             src="images/xayriya.svg" alt="">
-                        <p class="colornav mt-3 mb-0">Закот хайрия килиш</p></a>
+                        <p class="color_text mt-3 mb-0">Закот хайрия килиш</p></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mt-4 text-center">
                 <div class="py-3 px-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                 <a href="#" style="text-decoration: none" class="text font-weight-bold "><img src="images/fitr.svg" alt="">
-                    <p class="colornav mt-3">Фитр бериш</p></a>
+                    <p class="color_text mt-3">Фитр бериш</p></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mt-4 text-center">
                 <div class="px-3 py-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                 <a href="#" style="text-decoration: none" class="text font-weight-bold "><img src="images/zakot.svg" alt="">
-                    <p class="colornav mt-3">Фитр бериш</p></a>
+                    <p class="color_text mt-3">Фитр бериш</p></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mt-4 text-center">
                 <div class="px-3 py-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                 <a href="#" style="text-decoration: none" class="text font-weight-bold "><img src="images/message.svg" alt="">
-                    <p class="colornav mt-3">SMS оркали хайрия килиш</p></a>
+                    <p class="color_text mt-3">SMS оркали хайрия килиш</p></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mt-4 text-center">
                 <div class="p-3" style="border: 1px solid #3CB68A;border-radius: 10px; height: 150px">
                 <a href="#" style="text-decoration: none" class="text font-weight-bold "><img src="images/duo.svg" alt="">
-                    <p class="colornav mt-3">Дуолар</p></a>
+                    <p class="color_text mt-3">Дуолар</p></a>
                 </div>
             </div>
         </div>
@@ -234,19 +233,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-12">
-                <p>
-                    Ҳурматли фойдаланувчи! Сиз закот, фитр ва бошқа хайриялар бўйича ўтказган маблағларингизнинг мақомини текшириш имконига эгасиз. Бунинг учун сизга берилган чекдаги тегишли рақамни киритишингиз керак. Агар сиз электрон тўлов тизимлари орқали тўловни амалга оширган бўлсангиз (Payme, Click, Uzcard, Mbank), тўлов рақами электрон шаклда кўрсатилади.
+                <p>Ҳурматли фойдаланувчи! Сиз закот, фитр ва бошқа хайриялар бўйича ўтказган маблағларингизнинг
+                    мақомини текшириш имконига эгасиз. Бунинг учун сизга берилган чекдаги тегишли рақамни киритишингиз
+                    керак. Агар сиз электрон тўлов тизимлари орқали тўловни амалга оширган бўлсангиз (Payme, Click,
+                    Uzcard, Mbank), тўлов рақами электрон шаклда кўрсатилади.
                 </p>
             </div>
             <div class="col-md-6 col-12 text-center">
-                <h4 class="colornav font-weight-bold">
+                <h4 class="color_text font-weight-bold">
                     ТЎЛОВ ҲОЛАТИНИ ТЕКШИРИШ
                 </h4>
                 <input class="input_tolov outline-success" type="text" placeholder="Тулов ракамини киритинг">
-                <button type="submit" style="width: 380px;" class="btn btn_tolov button_hover1 mx-auto mt-2 font-weight-bold btn-outline-success colornavbg d-block text-white mt-2 bg-transparent">
-                    <div class="colornavbg ml-auto text-white my-2 my-sm-0"
-                    >Batafsil
-                    </div>
+                <button type="submit" style="width: 380px;"
+                        class="btn btn_tolov button_hover1 mx-auto mt-2 font-weight-bold btn-outline-success color_back_btn2 d-block text-white mt-2 bg-transparent">
+                    <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Batafsil</div>
                 </button>
             </div>
         </div>
@@ -258,13 +258,14 @@
     <h1 class="text-center my-5">Фонд хакида</h1>
     <div class="container">
         <p class="my-5"> Как принято считать, сделанные на базе интернет-аналитики выводы, инициированные исключительно синтетически, преданы социально-демократической анафеме.
-
-        С учётом сложившейся международной обстановки, граница обучения кадров прекрасно подходит для реализации модели развития. В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности прекрасно подходит для реализации экспериментов, поражающих по своей масштабности и грандиозности.
-
-        И нет сомнений, что многие известные личности являются только методом политического участия и преданы социально-демократической анафеме.</p>
+            С учётом сложившейся международной обстановки, граница обучения кадров прекрасно подходит для реализации
+            модели развития. В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности
+            прекрасно подходит для реализации экспериментов, поражающих по своей масштабности и грандиозности. И нет сомнений, что многие известные личности являются только методом политического участия и преданы
+            социально-демократической анафеме.
+        </p>
     </div>
     <div class="d-flex"
-         style="background-position: center;background-image: url('image/flower.png');opacity: 0.1;height: 230px; background-size: 230px 230px">
+         style="background-position: center;background-image: url('image/flower.png');opacity: 1;height: 230px; background-size: 230px 230px">
     </div>
 </section>
 <section class="News">
@@ -328,16 +329,16 @@
         </div>
         <div class="text-center">
             <button type="submit" class="btn my-5 button_hover bg-transparent">
-                <div class="colornavbg ml-auto text-white my-2 my-sm-0"
+                <div class="color_back_btn ml-auto text-white my-2 my-sm-0"
                 >Batafsil
                 </div>
             </button>
         </div>
     </div>
 </section>
-<section class="text-center">
-    <h1 class="mt-4 mb-4">Жорий ойдаги харажатлар</h1>
-    <section class="mb-5">
+<section class="chart_part">
+    <h1 class="mt-4 text-center mb-4">Жорий ойдаги харажатлар</h1>
+    <section class="mb-5 text-center">
         <div class="chart-container d-flex container">
             <div class="row" style="width: 100%">
                 <div class="col-sm-6 col-12">
@@ -370,12 +371,12 @@
                 </div>
             </div>
         </div>
+        <button type="submit" class="btn text-center my-5 button_hover bg-transparent">
+            <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Batafsil</div>
+        </button>
     </section>
-    <button type="submit" class="btn my-5 button_hover bg-transparent">
-        <div class="colornavbg ml-auto text-white my-2 my-sm-0"
-        >Batafsil
-        </div>
-    </button></section>
+
+</section>
 <section class="container">
     <div class="row pt-4">
         <div class="col-md-3 col-6 text-center">
@@ -387,8 +388,7 @@
         <div class="col-md-3 col-6  text-center">
             <a href="#" style="text-decoration: none" class="text font-weight-bold "><img src="images/aksiya.svg" alt="">
                 <h3 class="mt-3 text-dark counter" data-target="20000">2000</h3>
-                <p class="mt-3 text-dark">хайрия акциялари
-                    ташкиллаштирилди</p>
+                <p class="mt-3 text-dark">хайрия акциялари ташкиллаштирилди</p>
             </a>
         </div>
         <div class="col-md-3 col-6  text-center">
@@ -408,7 +408,6 @@
 
     </div>
 </section>
-
 <section class="aksiya">
     <div class="container">
         <div class="row">
@@ -421,7 +420,7 @@
                     </div>
                     <div class="mx-1">
                     <div class="progress" style="height:10px">
-                        <div class="progress-bar colornavbg1" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                             <div class="button text-white">50%</div>
                         </div>
                     </div>
@@ -435,46 +434,14 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between pb-3">
-                            <button class="btn btn-outline-success font-weight-bold colornavbg px-4  text-white " type="submit">
-                                Хайрия қилиш
+                        <div class="d-flex justify-content-between align-items-center pb-3">
+                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
+                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
+                                >Хайрия қилиш
+                                </div>
                             </button>
-                            <button class="btn  btnbg  text-white" type="submit">
-                                <img height="25px" src="image/share.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
-                    <div class="d-flex px-3 pt-2  justify-content-between">
-                        <p>Алиса Пушкина</p>
-                        <h5>5 лет</h5>
-                    </div>
-                    <div class="mx-1">
-                        <div class="progress" style="height:10px">
-                            <div class="progress-bar colornavbg1" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="button text-white">20%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mx-3">
-                        <div class="d-flex mt-4 justify-content-between">
-                            <p class="mb-0">Талаб: </p>
-                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Тўпланди:</p>
-                            <h5 class="font-weight-bold">4 564 056 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between pb-3">
-                            <button class="btn btn-outline-success font-weight-bold colornavbg px-4  text-white " type="submit">
-                                Хайрия қилиш
-                            </button>
-                            <button class="btn  btnbg  text-white" type="submit">
-                                <img height="25px" src="image/share.png" alt="">
+                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
+                                <img height="20px" src="image/share.png" alt="">
                             </button>
                         </div>
                     </div>
@@ -489,7 +456,7 @@
                     </div>
                     <div class="mx-1">
                         <div class="progress" style="height:10px">
-                            <div class="progress-bar colornavbg1" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                 <div class="button text-white">20%</div>
                             </div>
                         </div>
@@ -503,12 +470,50 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between pb-3">
-                            <button class="btn btn-outline-success font-weight-bold colornavbg px-4  text-white " type="submit">
-                                Хайрия қилиш
+                        <div class="d-flex justify-content-between align-items-center pb-3">
+                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
+                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
+                                >Хайрия қилиш
+                                </div>
                             </button>
-                            <button class="btn  btnbg  text-white" type="submit">
-                                <img height="25px" src="image/share.png" alt="">
+                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
+                                <img height="20px" src="image/share.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <div class="d-flex px-3 pt-2  justify-content-between">
+                        <p>Алиса Пушкина</p>
+                        <h5>5 лет</h5>
+                    </div>
+                    <div class="mx-1">
+                        <div class="progress" style="height:10px">
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="button text-white">20%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3">
+                        <div class="d-flex mt-4 justify-content-between">
+                            <p class="mb-0">Талаб: </p>
+                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Тўпланди:</p>
+                            <h5 class="font-weight-bold">4 564 056 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pb-3">
+                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
+                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
+                                >Хайрия қилиш
+                                </div>
+                            </button>
+                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
+                                <img height="20px" src="image/share.png" alt="">
                             </button>
                         </div>
                     </div>
@@ -517,14 +522,13 @@
         </div>
         <div class="text-center">
             <button type="submit" class="btn my-5 button_hover bg-transparent">
-                <div class="colornavbg ml-auto text-white my-2 my-sm-0"
+                <div class="color_back_btn ml-auto text-white my-2 my-sm-0"
                 >Batafsil
                 </div>
             </button>
         </div>
     </div>
 </section>
-
 <section>
     <h1 class="text-center mb-4">Фотогалерея</h1>
     <div class="container">
@@ -564,7 +568,7 @@
 
     <div class="text-center">
         <button type="submit" class="btn my-5 button_hover bg-transparent">
-            <div class="colornavbg ml-auto text-white my-2 my-sm-0"
+            <div class="color_back_btn ml-auto text-white my-2 my-sm-0"
             >Batafsil
             </div>
         </button>
@@ -579,7 +583,7 @@
                     <a class="link" href="#"></a>
                     <div class="position-relative card-header p-0" style="border-radius: 10px">
                         <img class="card_img card-img-top" src="image/newsimg.png" alt="">
-                        <img class="videoplay" src="images/button.svg" alt="">
+                        <img class="video_play" src="images/button.svg" alt="">
                     </div>
                     <div class="d-flex pt-4  justify-content-between align-items-center">
 
@@ -598,7 +602,7 @@
                     <a class="link" href="#"></a>
                     <div class="position-relative card-header p-0" style="border-radius: 10px">
                         <img class="card_img card-img-top" src="image/newsimg.png" alt="">
-                        <img class="videoplay" src="images/button.svg" alt="">
+                        <img class="video_play" src="images/button.svg" alt="">
                     </div>
                     <div class="d-flex pt-4  justify-content-between align-items-center">
 
@@ -616,55 +620,32 @@
     </div>
     <div class="text-center">
         <button type="submit" class="btn my-5 button_hover bg-transparent">
-            <div class="colornavbg ml-auto text-white my-2 my-sm-0"
-            >Batafsil
-            </div>
+            <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Batafsil</div>
         </button>
     </div>
 </section>
-
-
-<!--<div id="owl-demo2" class="owl-carousel2 owl-theme owl-carousel">-->
-<!--    <div class="item">-->
-<!--        <img src="https://static5.depositphotos.com/1012327/519/i/600/depositphotos_5191208-stock-photo-view-of-a-mosque.jpg" alt="">-->
-<!--    </div>-->
-<!--    <div class="item">-->
-<!--        <img src="https://static5.depositphotos.com/1012327/519/i/600/depositphotos_5191208-stock-photo-view-of-a-mosque.jpg" alt="">-->
-<!--    </div>-->
-<!--    <div class="item">-->
-<!--        <img src="https://static5.depositphotos.com/1012327/519/i/600/depositphotos_5191208-stock-photo-view-of-a-mosque.jpg" alt="">-->
-<!--    </div>-->
-<!--    <div class="item">-->
-<!--        <img src="https://static5.depositphotos.com/1012327/519/i/600/depositphotos_5191208-stock-photo-view-of-a-mosque.jpg" alt="">-->
-<!--    </div>-->
-<!--    <div class="item">-->
-<!--        <img src="https://static5.depositphotos.com/1012327/519/i/600/depositphotos_5191208-stock-photo-view-of-a-mosque.jpg" alt="">-->
-<!--    </div>-->
-
-<!--</div>-->
-
+<section>
 <h1 class="text-center mb-4">Хамкорлармиз</h1>
-
 <div class="container">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
             <div class="carousel-item active col-md-4 p-lg-5">
-                <div class="bordercar p-5">
+                <div class="border_car p-5">
                     <img src="images/azontv.svg" height="80px" class=" mx-auto d-block">
                 </div>
             </div>
             <div class="carousel-item  col-md-4 p-lg-5">
-                <div class="bordercar p-5">
+                <div class="border_car p-5">
                     <img src="images/kunuz.svg" height="80px" class=" mx-auto d-block">
                 </div>
             </div>
             <div class="carousel-item  col-md-4 p-lg-5">
-                <div class="bordercar p-5">
+                <div class="border_car p-5">
                     <img src="images/azontv2.svg" height="80px" class=" mx-auto d-block">
                 </div>
             </div>
             <div class="carousel-item  col-md-4 p-lg-5">
-                <div class="bordercar p-5">
+                <div class="border_car p-5">
                     <img src="images/kunuz.svg" height="80px" class=" mx-auto d-block">
                 </div>
             </div>
@@ -679,8 +660,7 @@
         </a>
     </div>
 </div>
-
-
+</section>
 <section class="footer">
     <div class="container">
         <div class="row pt-4">
@@ -752,9 +732,15 @@
                         <a class="nav-link text-white p-1" href="#"><img src="images/VK.svg" alt=""></a>
                     </li>
                 </ul>
-                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.</a>
-                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;"> 998 95 195-16-10
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">
+                    <p>
+                    100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.
+                    </p>
+                </a>
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;">
+                    <p>998 95 195-16-10
                     998 71 201-02-72
+                    </p>
                 </a>
 
             </div>
@@ -860,9 +846,14 @@
 <section class="proactive py-2 text-center">
     <a href="" class="text-white">Proactive Mediaда ишлаб чикилган</a>
 </section>
+<button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroll_div"><span class="fa fa-angle-up"></span></div></button>
 
 
-<button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroldiv"><span class="fa fa-angle-up"></span></div></button>
+
+
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="owl.carousel.min.js"></script>

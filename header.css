@@ -1,0 +1,132 @@
+.search-input {
+    width: 300px;
+    height: 100px;
+    position: relative;
+}
+.search-input .search {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 230px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3CB68A;
+    border-radius: 8px;
+    color: black;
+    font-size: 24px;
+    background: white;
+    transition: all 1s;
+    z-index: 4;
+}
+@media (max-width: 400px){
+    .search-input .search{
+        left: 250px;
+    }
+}
+
+
+.search-input .search:hover {
+    cursor: pointer;
+}
+.search-input .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: black;
+    transform: rotate(45deg);
+    transition: all .5s;
+}
+.search-input .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: all .5s;
+}
+.search-input input {
+    font-family: 'XBRoyaBold','Inconsolata', monospace;
+    position: absolute;
+    text-align: left;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    background: white;
+    color: black;
+    padding: 0 80px 0 20px;
+    border-radius: 10px;
+    border: 1px solid #3CB68A;
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+}
+.search-input input:hover {
+    cursor: pointer;
+}
+.search-input input:focus {
+    width: 300px;
+    opacity: 1;
+    cursor: text;
+    left: -50px;
+}
+.search-input input:focus ~ .search {
+    right: 0;
+    background: white;
+    z-index: 6;
+    border-left: none;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+}
+.search-input input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+.search-input input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: black;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+}
+.search-input input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+.navbar ul li a h4{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#mobile_items ul li a h4{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.headerFooter {
+    flex-direction: unset!important;
+}
+
+@media (max-width: 400px){
+    .search-input input:focus{
+        left: 0;
+    }
+}
