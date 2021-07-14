@@ -73,7 +73,7 @@ $(document).ready(function () {
     })
 })
 
-$('.owl-carousel').owlCarousel({
+$('#owl-carousel').owlCarousel({
     loop:true,
     animateOut: 'fadeOut',
     margin:10,
@@ -187,3 +187,21 @@ var pieChart = new Chart(oilCanvas, {
     }
 }
 );
+
+$('#owl-demo').owlCarousel({
+    loop:true,
+    margin:10,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        700:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
