@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xayriya</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<section class="header">
+    <div class="shadow">
+        <nav class="navbar container navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="index.html">
+                <img src="images/Logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-center ml-auto">
+                    <div class="container search-input">
+                        <div>
+                            <input type="text" placeholder="Search...">
+                            <div class="search"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-4 main_drop">
+                        <button type="button" class="btn dropdown-toggle bg-transparent" data-toggle="dropdown">
+                            uz
+                        </button>
+                        <div class="dropdown-menu drop">
+                            <a class="dropdown-item lang" href="#">eng</a>
+                            <a class="dropdown-item lang" href="#">rus</a>
+                            <a class="dropdown-item lang" href="#">uz</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn button_hover bg-transparent">
+                        <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Xayriya qilish</div>
+                    </button>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container pt-4 pb-4 d-flex justify-content-center">
+        <div class="navbar navbar-expand">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="xayriya-page.html"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="yangiliklar-page.html"><h4 class="color_text font-weight-bold ">Янгиликлар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Маколалар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фотолар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Видеолар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Алока</h4></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<section class="header_mobile d-none">
+    <nav class="navbar container navbar-expand-lg navbar-light">
+        <button id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
+            <div class="span p-1" style="font-size: 25px"><img width="25px" src="image/img.png" alt=""></div>
+        </button>
+        <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+            <img width="200px" src="images/Logo.svg" alt="">
+        </a>
+        <div class="container search-input">
+            <div>
+                <input type="text" placeholder="Search...">
+                <div class="search"></div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile_items" class="d-none container">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фонд хакида</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Хайрия акциялари</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Янгиликлар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Маколалар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фотолар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Видеолар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Алока</h4></a>
+            </li>
+        </ul>
+        <div class="ml-auto">
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">UZ</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">RU</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">EN</button>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 class="text-center mb-4">Видеогалерея</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 video col-sm-12 mt-5 mb-4">
+                <div class="card border-none">
+
+                    <div class="position-relative card-header p-0" style="border-radius: 10px">
+                        <img class="card_img card-img-top" src="image/newsimg.png" alt="">
+
+                        <img class="video_play" src="images/button.svg" alt="">
+                        <a class="link" href="#" data-toggle="modal" data-target="#exampleModal"></a>
+                    </div>
+                    <div class="d-flex pt-4  justify-content-between align-items-center">
+
+                        <div class="d-flex mr-4">
+                            <h5 class="mb-0 font-weight-bold">Каъбанинг бузилиб қайта қурилиши </h5>
+                        </div>
+                        <div class="d-flex ml-5">
+                            <img src="images/time_icon.svg" alt="">
+                            <p class="mb-0 ml-2 textColor">07.06.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 video col-sm-12 mt-5 mb-4">
+                <div class="card border-none">
+
+                    <div class="position-relative card-header p-0" style="border-radius: 10px">
+                        <img class="card_img card-img-top" src="image/newsimg.png" alt="">
+
+                        <img class="video_play" src="images/button.svg" alt="">
+                        <a class="link" href="#" data-toggle="modal" data-target="#exampleModal"></a>
+                    </div>
+                    <div class="d-flex pt-4  justify-content-between align-items-center">
+
+                        <div class="d-flex mr-4">
+                            <h5 class="mb-0 font-weight-bold">Каъбанинг бузилиб қайта қурилиши </h5>
+                        </div>
+                        <div class="d-flex ml-5">
+                            <img src="images/time_icon.svg" alt="">
+                            <p class="mb-0 ml-2 textColor">07.06.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 video col-sm-12 mt-5 mb-4">
+                <div class="card border-none">
+
+                    <div class="position-relative card-header p-0" style="border-radius: 10px">
+                        <img class="card_img card-img-top" src="image/newsimg.png" alt="">
+
+                        <img class="video_play" src="images/button.svg" alt="">
+                        <a class="link" href="#" data-toggle="modal" data-target="#exampleModal"></a>
+                    </div>
+                    <div class="d-flex pt-4  justify-content-between align-items-center">
+
+                        <div class="d-flex mr-4">
+                            <h5 class="mb-0 font-weight-bold">Каъбанинг бузилиб қайта қурилиши </h5>
+                        </div>
+                        <div class="d-flex ml-5">
+                            <img src="images/time_icon.svg" alt="">
+                            <p class="mb-0 ml-2 textColor">07.06.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 video col-sm-12 mt-5 mb-4">
+                <div class="card border-none">
+
+                    <div class="position-relative card-header p-0" style="border-radius: 10px">
+                        <img class="card_img card-img-top" src="image/newsimg.png" alt="">
+
+                        <img class="video_play" src="images/button.svg" alt="">
+                        <a class="link" href="#" data-toggle="modal" data-target="#exampleModal"></a>
+                    </div>
+                    <div class="d-flex pt-4  justify-content-between align-items-center">
+
+                        <div class="d-flex mr-4">
+                            <h5 class="mb-0 font-weight-bold">Каъбанинг бузилиб қайта қурилиши </h5>
+                        </div>
+                        <div class="d-flex ml-5">
+                            <img src="images/time_icon.svg" alt="">
+                            <p class="mb-0 ml-2 textColor">07.06.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 video col-sm-12 mt-5 mb-4">
+                <div class="card border-none">
+
+                    <div class="position-relative card-header p-0" style="border-radius: 10px">
+                        <img class="card_img card-img-top" src="image/newsimg.png" alt="">
+
+                        <img class="video_play" src="images/button.svg" alt="">
+                        <a class="link" href="#" data-toggle="modal" data-target="#exampleModal"></a>
+                    </div>
+                    <div class="d-flex pt-4  justify-content-between align-items-center">
+
+                        <div class="d-flex mr-4">
+                            <h5 class="mb-0 font-weight-bold">Каъбанинг бузилиб қайта қурилиши </h5>
+                        </div>
+                        <div class="d-flex ml-5">
+                            <img src="images/time_icon.svg" alt="">
+                            <p class="mb-0 ml-2 textColor">07.06.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" d-flex justify-content-center my-5">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link prev" href="#" aria-label="Previous">
+                        <img width="50px" src="images/next.svg" alt="">
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link next" href="#" aria-label="Next">
+                        <img width="50px" src="images/prev.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="height: 70vh">
+            <iframe height="100%" width="100%" src="https://www.youtube.com/embed/5vppJrWii4k?list=RD5vppJrWii4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                    <img src="images/logofooter.svg" alt="">
+                </a>
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Муқаддас қадамжо ва зиёратгоҳлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Зиёрат одоби</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mt-5 pt-5">
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mt-2">
+                <ul class="nav mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Telegram.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Facebook.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Twitter.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Instagram.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/OK.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/VK.svg" alt=""></a>
+                    </li>
+                </ul>
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">
+                    <p>
+                        100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.
+                    </p>
+                </a>
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;">
+                    <p>998 95 195-16-10
+                        998 71 201-02-72
+                    </p>
+                </a>
+
+            </div>
+            <div class="col-12 text-center">
+                <p class="text-white">Маълумотлардан фойдаланилганда www.vaqf.uz га ҳавола кўрсатилиши шарт</p>
+                <p class="text-white">©“Вақф” Барча ҳуқуқлар ҳимояланган 2018-2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer-mobile d-none">
+    <div class="container">
+        <div class="row pt-4">
+
+            <div class="col-md-4">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                    <img height="100px" src="images/logofooter.svg" alt="">
+                    <div class="ml-1">
+                        <h2 class="font-weight-bold text-white logo2 mb-0">VAQF</h2>
+                        <p class="mb-0 text-white logo">ХАЙРИЯ ЖАМОАТ ФОНДИ</p>
+                    </div>
+                </a>
+                <div class="mt-2">
+                    <ul class="nav mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Telegram.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Facebook.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Twitter.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Instagram.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/OK.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/VK.svg" alt=""></a>
+                        </li>
+                    </ul>
+                    <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.</a>
+                    <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;"> 998 95 195-16-10
+                        998 71 201-02-72
+                    </a>
+
+                </div>
+                <div class="border mt-3 w-100"></div>
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Муқаддас қадамжо ва зиёратгоҳлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Зиёрат одоби</p></a>
+                    </li>
+                </ul>
+                <div class="border mt-3 w-100"></div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 text-center">
+                <p class="text-white">Маълумотлардан фойдаланилганда www.vaqf.uz га ҳавола кўрсатилиши шарт</p>
+                <p class="text-white">©“Вақф” Барча ҳуқуқлар ҳимояланган 2018-2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="proactive py-2 text-center">
+    <a href="" class="text-white">Proactive Mediaда ишлаб чикилган</a>
+</section>
+<button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroll_div"><span class="fa fa-angle-up"></span></div></button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+</body>
+</html>

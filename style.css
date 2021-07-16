@@ -23,7 +23,36 @@ button{
     font-weight: bold;
 }
 
+.page-item .page-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    background: #E8E8E8;
+}
 
+
+
+
+
+
+
+
+
+
+
+.text{
+    text-decoration: none!important;
+}
+.page-item .prev {
+    border-radius: 50% !important;
+}
+.page-item .next {
+    border-radius: 50% !important;
+}
 .button_hover{
     border-radius: 15px;
     padding: 3px;

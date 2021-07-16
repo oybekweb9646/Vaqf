@@ -106,11 +106,11 @@ p{
     left: -5px;
     top: 38%;
 }
- .owl-nav button:nth-child(1) span{
+#owl-demo .owl-nav button:nth-child(1) span{
     margin-right: 4px;
      color: white;
 }
- .owl-nav button:nth-child(2) span {
+#owl-demo .owl-nav button:nth-child(2) span {
     margin-left: 4px;
      color: white;
 }
