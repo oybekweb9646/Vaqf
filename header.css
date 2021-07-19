@@ -36,8 +36,8 @@
     top: 22px;
     right: 0;
     bottom: 0;
-    left: 22px;
-    width: 12px;
+    left: 20px;
+    width: 9px;
     height: 2px;
     background: black;
     transform: rotate(45deg);
@@ -51,8 +51,8 @@
     right: 0;
     bottom: 0;
     left: -5px;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     border: 2px solid black;
     transition: all .5s;
