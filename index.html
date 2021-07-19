@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<!--    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/css/7-2-2.css">-->
 </head>
-<body>
+<body class="bg-white">
+
+
+
 <section class="header">
     <div class="shadow">
         <nav class="navbar container navbar-expand-lg navbar-light p-0">
@@ -94,11 +99,21 @@
         <a class="navbar-brand p-0 d-flex align-items-center" href="#">
             <img width="200px" src="images/Logo.svg" alt="">
         </a>
-        <div class="container search-input">
-            <div>
-                <input type="text" placeholder="Search...">
-                <div class="search"></div>
-            </div>
+        <div>
+        <div class="open-btn d-none"></div>
+
+        <div id="search-wrap" class="d-none">
+
+            <div class="close-btn"><span></span><span></span></div>
+
+            <div class="search-area">
+                <form role="search" method="get" action="">
+                    <input type="text" value="" name="" id="search-text" placeholder="search">
+                    <input type="submit" id="searchsubmit" value="">
+                </form>
+                <!--/search-area--></div>
+
+            <!--/search-wrap--></div>
         </div>
     </nav>
     <div id="mobile_items" class="d-none container">
@@ -133,7 +148,7 @@
     </div>
 </section>
 <section class="main">
-    <div style="background-image: url('image/linevaqf.svg');height: 36px"></div>
+    <div style="background-image: url('image/linevaqf.svg');height: 36px; background-repeat: repeat"></div>
     <div id="owl-carousel" class="owl-carousel one owl-theme">
         <div class="item"
              style="background-position: center;background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg); background-size: cover">
@@ -226,7 +241,7 @@
             </div>
         </div>
     </div>
-    <div style="background-image: url('image/linevaqf.svg');height: 36px"></div>
+    <div style="background-image: url('image/linevaqf.svg');background-repeat: repeat;height: 36px"></div>
     <div class=" my-5" style="border-top: 1px solid #114E47"></div>
 </section>
 <section>
@@ -265,7 +280,7 @@
         </p>
     </div>
     <div class="d-flex"
-         style="background-position: center;background-image: url('image/flower.png');opacity: 1;height: 230px; background-size: 230px 230px">
+         style="background-position: center;background-repeat: repeat;background-image: url('image/flower.png');opacity: 1;height: 230px; background-size: 230px 230px">
     </div>
 </section>
 <section class="News">
@@ -750,10 +765,6 @@
             <div class="col-md-4">
                 <a class="navbar-brand p-0 d-flex align-items-center" href="#">
                     <img height="100px" src="images/logofooter.svg" alt="">
-                    <div class="ml-1">
-                        <h2 class="font-weight-bold text-white logo2 mb-0">VAQF</h2>
-                        <p class="mb-0 text-white logo">ХАЙРИЯ ЖАМОАТ ФОНДИ</p>
-                    </div>
                 </a>
                 <div class="mt-2">
                     <ul class="nav mt-4">
@@ -848,6 +859,8 @@
         animateThumb: true,
     });
 </script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/js/7-2-2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="owl.carousel.min.js"></script>
