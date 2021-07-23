@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>xayriya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Xayriya</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
 </head>
-<body>
+<body class="bg-white">
+
+
+
 <section class="header">
     <div class="shadow">
         <nav class="navbar container navbar-expand-lg navbar-light p-0">
@@ -59,7 +60,7 @@
         <div class="navbar navbar-expand">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
+                    <a class="nav-link" href="fond-haqida.html"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="xayriya-page.html"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>
@@ -86,16 +87,22 @@
 </section>
 <section class="header_mobile d-none">
     <nav class="navbar container navbar-expand-lg navbar-light">
-        <button id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
-            <div class="span p-1" style="font-size: 25px"><img width="25px" src="image/img.png" alt=""></div>
+        <button style="height: 50px;width: 50px;display: flex;align-items: center;justify-content: center;border: 1px solid #3CB68A;border-radius: 8px;outline: none" id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
+            <div class="span p-1" ><img width="25px" src="image/img.png" alt=""></div>
         </button>
         <a class="navbar-brand p-0 d-flex align-items-center" href="#">
             <img width="200px" src="images/Logo.svg" alt="">
         </a>
-        <div class="container search-input">
-            <div>
-                <input type="text" placeholder="Search...">
-                <div class="search"></div>
+        <div>
+            <div class="open-btn d-none"></div>
+            <div id="search-wrap" class="d-none">
+                <div class="close-btn"><span></span><span></span></div>
+                <div class="search-area">
+                    <form role="search" method="get" action="">
+                        <input type="text" value="" name="" id="search-text" placeholder="search">
+                        <input type="submit" id="searchsubmit" value="">
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
@@ -135,7 +142,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <a href="card.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
                     <div class="d-flex px-3 pt-2  justify-content-between">
                         <p>Алиса Пушкина</p>
                         <h5>5 лет</h5>
@@ -156,7 +163,7 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
                             <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
                                 <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
                                 >Хайрия қилиш
@@ -171,79 +178,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
-                    <div class="d-flex px-3 pt-2  justify-content-between">
-                        <p>Алиса Пушкина</p>
-                        <h5>5 лет</h5>
-                    </div>
-                    <div class="mx-1">
-                        <div class="progress" style="height:10px">
-                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="button text-white">20%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mx-3">
-                        <div class="d-flex mt-4 justify-content-between">
-                            <p class="mb-0">Талаб: </p>
-                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Тўпланди:</p>
-                            <h5 class="font-weight-bold">4 564 056 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
-                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
-                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
-                                >Хайрия қилиш
-                                </div>
-                            </button>
-                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
-                                <img height="20px" src="image/share.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
-                    <div class="d-flex px-3 pt-2  justify-content-between">
-                        <p>Алиса Пушкина</p>
-                        <h5>5 лет</h5>
-                    </div>
-                    <div class="mx-1">
-                        <div class="progress" style="height:10px">
-                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="button text-white">20%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mx-3">
-                        <div class="d-flex mt-4 justify-content-between">
-                            <p class="mb-0">Талаб: </p>
-                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Тўпланди:</p>
-                            <h5 class="font-weight-bold">4 564 056 сум</h5>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
-                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
-                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
-                                >Хайрия қилиш
-                                </div>
-                            </button>
-                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
-                                <img height="20px" src="image/share.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <a href="fond-haqida.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
                     <div class="d-flex px-3 pt-2  justify-content-between">
                         <p>Алиса Пушкина</p>
                         <h5>5 лет</h5>
@@ -264,7 +199,7 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
                             <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
                                 <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
                                 >Хайрия қилиш
@@ -279,15 +214,15 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <a href="fond-haqida.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
                     <div class="d-flex px-3 pt-2  justify-content-between">
                         <p>Алиса Пушкина</p>
                         <h5>5 лет</h5>
                     </div>
                     <div class="mx-1">
                         <div class="progress" style="height:10px">
-                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="button text-white">20%</div>
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="button text-white">50%</div>
                             </div>
                         </div>
                     </div>
@@ -300,7 +235,7 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
                             <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
                                 <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
                                 >Хайрия қилиш
@@ -315,15 +250,15 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <a href="fond-haqida.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
                     <div class="d-flex px-3 pt-2  justify-content-between">
                         <p>Алиса Пушкина</p>
                         <h5>5 лет</h5>
                     </div>
                     <div class="mx-1">
                         <div class="progress" style="height:10px">
-                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="button text-white">20%</div>
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="button text-white">50%</div>
                             </div>
                         </div>
                     </div>
@@ -336,7 +271,79 @@
                             <p>Тўпланди:</p>
                             <h5 class="font-weight-bold">4 564 056 сум</h5>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
+                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
+                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
+                                >Хайрия қилиш
+                                </div>
+                            </button>
+                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
+                                <img height="20px" src="image/share.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                    <a href="fond-haqida.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
+                    <div class="d-flex px-3 pt-2  justify-content-between">
+                        <p>Алиса Пушкина</p>
+                        <h5>5 лет</h5>
+                    </div>
+                    <div class="mx-1">
+                        <div class="progress" style="height:10px">
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="button text-white">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3">
+                        <div class="d-flex mt-4 justify-content-between">
+                            <p class="mb-0">Талаб: </p>
+                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Тўпланди:</p>
+                            <h5 class="font-weight-bold">4 564 056 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
+                            <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
+                                <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
+                                >Хайрия қилиш
+                                </div>
+                            </button>
+                            <button style="height: 50px" class="btn border_share  button_back_color  text-white" type="submit">
+                                <img height="20px" src="image/share.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                    <a href="fond-haqida.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
+                    <div class="d-flex px-3 pt-2  justify-content-between">
+                        <p>Алиса Пушкина</p>
+                        <h5>5 лет</h5>
+                    </div>
+                    <div class="mx-1">
+                        <div class="progress" style="height:10px">
+                            <div class="progress-bar color_back" role="progressbar" style="border-radius: 5px;width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="button text-white">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3">
+                        <div class="d-flex mt-4 justify-content-between">
+                            <p class="mb-0">Талаб: </p>
+                            <h5 class="mb-0 font-weight-bold">25 000 000 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Тўпланди:</p>
+                            <h5 class="font-weight-bold">4 564 056 сум</h5>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pb-3 mt-4">
                             <button style="width: 215px;" type="submit" class="btn button_hover bg-transparent">
                                 <div style="width: 200px;" class="color_back_btn ml-auto text-white my-sm-0"
                                 >Хайрия қилиш
@@ -456,10 +463,6 @@
             <div class="col-md-4">
                 <a class="navbar-brand p-0 d-flex align-items-center" href="#">
                     <img height="100px" src="images/logofooter.svg" alt="">
-                    <div class="ml-1">
-                        <h2 class="font-weight-bold text-white logo2 mb-0">VAQF</h2>
-                        <p class="mb-0 text-white logo">ХАЙРИЯ ЖАМОАТ ФОНДИ</p>
-                    </div>
                 </a>
                 <div class="mt-2">
                     <ul class="nav mt-4">
@@ -545,9 +548,8 @@
     <a href="" class="text-white">Proactive Mediaда ишлаб чикилган</a>
 </section>
 <button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroll_div"><span class="fa fa-angle-up"></span></div></button>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/js/7-2-2.js"></script>
 <script src="script.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+</head>
+
+<body class="bg-white">
+
+
+
+<section class="header">
+    <div class="shadow">
+        <nav class="navbar container navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="index.html">
+                <img src="images/Logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-center ml-auto">
+                    <div class="container search-input">
+                        <div>
+                            <input type="text" placeholder="Search...">
+                            <div class="search"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-4 main_drop">
+                        <button type="button" class="btn dropdown-toggle bg-transparent" data-toggle="dropdown">
+                            uz
+                        </button>
+                        <div class="dropdown-menu drop">
+                            <a class="dropdown-item lang" href="#">eng</a>
+                            <a class="dropdown-item lang" href="#">rus</a>
+                            <a class="dropdown-item lang" href="#">uz</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn button_hover bg-transparent">
+                        <div class="color_back_btn ml-auto text-white my-2 my-sm-0">Xayriya qilish</div>
+                    </button>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container pt-4 pb-4 d-flex justify-content-center">
+        <div class="navbar navbar-expand">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="fond-haqida.html"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="xayriya-page.html"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="yangiliklar-page.html"><h4 class="color_text font-weight-bold ">Янгиликлар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Маколалар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photo-page.html"><h4 class="color_text font-weight-bold ">Фотолар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="video-page.html"><h4 class="color_text font-weight-bold ">Видеолар</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Алока</h4></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<section class="header_mobile d-none">
+    <nav class="navbar container navbar-expand-lg navbar-light">
+        <button style="height: 50px;width: 50px;display: flex;align-items: center;justify-content: center;border: 1px solid #3CB68A;border-radius: 8px;outline: none" id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
+            <div class="span p-1" ><img width="25px" src="image/img.png" alt=""></div>
+        </button>
+        <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+            <img width="200px" src="images/Logo.svg" alt="">
+        </a>
+        <div>
+            <div class="open-btn d-none"></div>
+            <div id="search-wrap" class="d-none">
+                <div class="close-btn"><span></span><span></span></div>
+                <div class="search-area">
+                    <form role="search" method="get" action="">
+                        <input type="text" value="" name="" id="search-text" placeholder="search">
+                        <input type="submit" id="searchsubmit" value="">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile_items" class="d-none container">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фонд хакида</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Хайрия акциялари</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Янгиликлар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Маколалар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Фотолар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Видеолар</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4 class="color_text font-weight-normal ">Алока</h4></a>
+            </li>
+        </ul>
+        <div class="ml-auto">
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">UZ</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">RU</button>
+            <button class="btn bg-white mr-4 main_dropMobile  d-block mt-2">EN</button>
+        </div>
+    </div>
+</section>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="wrapper">
+
+                <div class="buttons text-center">
+                    <button value="Кўп асрлик миллий ва диний қадриятларимизни асраб-авайлаш, дунё илм-фани ва маданияти ривожига улкан ҳисса қўшган аждодларимизнинг бебаҳо меросини ўрганиш, халқимизга азал-азалдан хос бўлган маърифатпарварлик, бағрикенглик, меҳр-мурувват, бунёдкорлик каби эзгу фазилат ва қадриятларни давом эттиришга кўмаклашишдир." class="btn mt-3 fond_page btn-success" type="button">Максади</button>
+                    <button value="фуқароларнинг диний, маънавий ва интеллектуал салоҳиятини оширишга қаратилган ташаббусларини қўллаб-қувватлаш, миллий ва диний қадриятларимизни асраб-авайлаш масжидлар ва диний таълим муассасаларининг биноларини қуриш, таъмирлаш, реконструкция қилиш, ободонлаштириш, моддий-техник базасини мустаҳкамлаш тарихий-меъморий аҳамиятга эга зиёратгоҳларни сақлаш, таъмирлаш, ободонлаштириш, уларнинг инфратузилмасини янада ривожлантириш диний таълим муассасалари, илмий-тадқиқот марказлари фаолиятини молиялаштириш, уларнинг профессор-ўқитувчилари, тадқиқотчилари, мутахассислари ва ўқувчи-талабаларини моддий ва ижтимоий қўллаб-қувватлаш масжидлар ва зиёратгоҳлар ходимларини, хусусан имом-хатиблар, имом ноиблари, мутаваллилар, муаззинларни моддий ва ижтимоий қўллаб-қувватлаш ислом илм-фани ва маданияти ривожига ўлкан ҳисса қўшган буюк аждодларимиз, замонамизнинг етук олим ва уламолари қаламига мансуб диний-маърифий асарларни чоп этиш ва аҳолига етказишга кўмаклашиш юртимиздаги муқаддас зиёратгоҳ ва қадамжоларнинг мусулмон дунёсидаги нуфузини янада ошириш, бу масканларга маҳаллий ва хорижий фуқароларнинг зиёратларини уюштириш, зиёратчилар учун зарур шароитлар яратиш аҳолининг ижтимоий ҳимояга муҳтож қатламлари, шу жумладан имконияти чекланган шахсларни моддий ва маънавий қўллаб-қувватлаш Бундан ташқари жамоат фондига келиб тушадиган турли хилдаги тушумларнинг келиб тушиш ва сарфланиши бўйича алоҳида ҳисобини олиб бориш мақсадида вақф, закот (фитр, ушр) ва хайрия маблағларига алоҳида-алоҳида ҳисоб рақамлар ташкил қилиш, шунингдек, ушбу ҳисоб рақамлардаги маблағларни ўз мақсадига мувофиқ сарфланишини таъминлашдан иборат." class="btn mt-3 fond_page btn-success" type="button">Вазифалари</button>
+                    <button value="<div><div class='row'><div class='col-lg-3 text-center'><img src='images/imom.png'></div><div class='col-lg-9 text-center'><h4 class='mt-3'>Абдурахманов Яхъё Убайдуллаевич</h4><a href='#' style='color: #3CB68A'>Фонд бошқаруви раҳбари</a></div></div></div>" class="btn mt-3 fond_page btn-success" type="button">Рахбарият</button>
+                    <button value="фуқароларнинг диний, маънавий ва интеллектуал салоҳиятини оширишга қаратилган ташаббусларини қўллаб-қувватлаш, миллий ва диний қадриятларимизни асраб-авайлаш масжидлар ва диний таълим муассасаларининг биноларини қуриш, таъмирлаш, реконструкция қилиш, ободонлаштириш, моддий-техник базасини мустаҳкамлаш тарихий-меъморий аҳамиятга эга зиёратгоҳларни сақлаш, таъмирлаш, ободонлаштириш, уларнинг инфратузилмасини янада ривожлантириш диний таълим муассасалари, илмий-тадқиқот марказлари фаолиятини молиялаштириш, уларнинг профессор-ўқитувчилари, тадқиқотчилари, мутахассислари ва ўқувчи-талабаларини моддий ва ижтимоий қўллаб-қувватлаш масжидлар ва зиёратгоҳлар ходимларини, хусусан имом-хатиблар, имом ноиблари, мутаваллилар, муаззинларни моддий ва ижтимоий қўллаб-қувватлаш ислом илм-фани ва маданияти ривожига ўлкан ҳисса қўшган буюк аждодларимиз, замонамизнинг етук олим ва уламолари қаламига мансуб диний-маърифий асарларни чоп этиш ва аҳолига етказишга кўмаклашиш юртимиздаги муқаддас зиёратгоҳ ва қадамжоларнинг мусулмон дунёсидаги нуфузини янада ошириш, бу масканларга маҳаллий ва хорижий фуқароларнинг зиёратларини уюштириш, зиёратчилар учун зарур шароитлар яратиш аҳолининг ижтимоий ҳимояга муҳтож қатламлари, шу жумладан имконияти чекланган шахсларни моддий ва маънавий қўллаб-қувватлаш Бундан ташқари жамоат фондига келиб тушадиган турли хилдаги тушумларнинг келиб тушиш ва сарфланиши бўйича алоҳида ҳисобини олиб бориш мақсадида вақф, закот (фитр, ушр) ва хайрия маблағларига алоҳида-алоҳида ҳисоб рақамлар ташкил қилиш, шунингдек, ушбу ҳисоб рақамлардаги маблағларни ўз мақсадига мувофиқ сарфланишини таъминлашдан иборат." class="btn mt-3 fond_page btn-success" type="button">Марказий аппарат</button>
+                    <button value='<div style="border-radius: 10px;border: 1px solid #3CB68A" class="w-100 p-4"><h5>Қорақалпоғистон Республикаси</h5><div class="d-flex mt-4"><p style="color: #3CB68A">Раҳбар: </p><p class="ml-2">Тажетдинов Исламбек Жоллыбаевич</p></div><div class="d-flex mt-4"><p style="color: #3CB68A">Раҳбар: <p>Тажетдинов Исламбек Жоллыбаевич</p></div><div class="d-flex mt-4"><p style="color: #3CB68A">Раҳбар: <p>Тажетдинов Исламбек Жоллыбаевич</p></div></div>' class="btn mt-3 fond_page btn-success" type="button">Худудий филиаллар</button>
+                    <button value='
+                    <div class="row">
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/azontv.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/azontv2.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/xayriya.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/duo.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/azontv.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/azontv2.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/xayriya.svg" alt=""></div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-3 text-center">
+                        <div class="border border-radius p-3" style="border-radius: 5px"><img height="80px" style="max-width: 90%;" src="images/duo.svg" alt=""></div>
+                    </div>
+                </div>' class="btn mt-3 fond_page btn-success" type="button">Хамкорларимиз</button>
+                    <button value="Кўп асрлик миллий ва диний қадриятларимизни асраб-авайлаш, дунё илм-фани ва маданияти ривожига улкан ҳисса қўшган аждодларимизнинг бебаҳо меросини ўрганиш, халқимизга азал-азалдан хос бўлган маърифатпарварлик, бағрикенглик, меҳр-мурувват, бунёдкорлик каби эзгу фазилат ва қадриятларни давом эттиришга кўмаклашишдир." class="btn mt-3 fond_page btn-success" type="button">Кунгилли ёрдамчилар</button>
+                    <button value="фуқароларнинг диний, маънавий ва интеллектуал салоҳиятини оширишга қаратилган ташаббусларини қўллаб-қувватлаш, миллий ва диний қадриятларимизни асраб-авайлаш масжидлар ва диний таълим муассасаларининг биноларини қуриш, таъмирлаш, реконструкция қилиш, ободонлаштириш, моддий-техник базасини мустаҳкамлаш тарихий-меъморий аҳамиятга эга зиёратгоҳларни сақлаш, таъмирлаш, ободонлаштириш, уларнинг инфратузилмасини янада ривожлантириш диний таълим муассасалари, илмий-тадқиқот марказлари фаолиятини молиялаштириш, уларнинг профессор-ўқитувчилари, тадқиқотчилари, мутахассислари ва ўқувчи-талабаларини моддий ва ижтимоий қўллаб-қувватлаш масжидлар ва зиёратгоҳлар ходимларини, хусусан имом-хатиблар, имом ноиблари, мутаваллилар, муаззинларни моддий ва ижтимоий қўллаб-қувватлаш ислом илм-фани ва маданияти ривожига ўлкан ҳисса қўшган буюк аждодларимиз, замонамизнинг етук олим ва уламолари қаламига мансуб диний-маърифий асарларни чоп этиш ва аҳолига етказишга кўмаклашиш юртимиздаги муқаддас зиёратгоҳ ва қадамжоларнинг мусулмон дунёсидаги нуфузини янада ошириш, бу масканларга маҳаллий ва хорижий фуқароларнинг зиёратларини уюштириш, зиёратчилар учун зарур шароитлар яратиш аҳолининг ижтимоий ҳимояга муҳтож қатламлари, шу жумладан имконияти чекланган шахсларни моддий ва маънавий қўллаб-қувватлаш Бундан ташқари жамоат фондига келиб тушадиган турли хилдаги тушумларнинг келиб тушиш ва сарфланиши бўйича алоҳида ҳисобини олиб бориш мақсадида вақф, закот (фитр, ушр) ва хайрия маблағларига алоҳида-алоҳида ҳисоб рақамлар ташкил қилиш, шунингдек, ушбу ҳисоб рақамлардаги маблағларни ўз мақсадига мувофиқ сарфланишини таъминлашдан иборат." class="btn mt-3 fond_page btn-success" type="button">Банк реквизитлари</button>
+                    <button value="Кўп асрлик миллий ва диний қадриятларимизни асраб-авайлаш, дунё илм-фани ва маданияти ривожига улкан ҳисса қўшган аждодларимизнинг бебаҳо меросини ўрганиш, халқимизга азал-азалдан хос бўлган маърифатпарварлик, бағрикенглик, меҳр-мурувват, бунёдкорлик каби эзгу фазилат ва қадриятларни давом эттиришга кўмаклашишдир." class="btn mt-3 fond_page text-center btn-success" type="button">Мукаддас
+                        зиёратгохлар</button>
+                    <button value='<div class="col-12">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="heading-1">
+                <h5 class="mb-0">
+                    <a role="button" style="text-decoration: none" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                        Жамгарма нима килади
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                <div class="card-body">
+                    Жамгарма нима килади
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading-2">
+                <h5 class="mb-0">
+                    <a class="collapsed" style="text-decoration: none" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                        Хайрия пуллари каерга кетади
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                <div class="card-body">
+                    Text 2
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading-3">
+                <h5 class="mb-0">
+                    <a style="text-decoration: none" class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                        Жамгармани ривожлантириш учун кандай маблак
+                        манбалари мавжуд
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-3">
+                <div class="card-body">
+                    Text 3
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading-4">
+                <h5 class="mb-0">
+                    <a style="text-decoration: none" class="collapsed" role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                        Жамгарма учун кандай лойихалар режалаштирилган
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-4" style="text-decoration: none" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+                <div class="card-body">
+                    Text 3
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading-5">
+                <h5 class="mb-0">
+                    <a style="text-decoration: none" class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                        Жисмоний шахслар кандай ёрдам бериши мумкин
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-5" style="text-decoration: none" class="collapse" data-parent="#accordion" aria-labelledby="heading-5">
+                <div class="card-body">
+                    Text 3
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>' class="btn mt-3 fond_page btn-success" type="button">Савол жавоб</button>
+                    <button value='<div class="col-12 mt-5">
+                <ul class="nav mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link  p-1" href="#"><img src="images/Telegram_fond.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  p-1" href="#"><img src="images/Facebook_fond.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#"><img src="images/Twitter_fond.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#"><img src="images/Instagram_fond.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#"><img src="images/OK_fond.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#"><img src="images/VK_fond.svg" alt=""></a>
+                    </li>
+                </ul>
+                <a class="nav-link mt-5  p-1" href="#" style="width: 218px;">
+                    <p>
+                        100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.
+                    </p>
+                </a>
+                <a class="nav-link mt-5 p-1" href="#" style="width: 155px;">
+                    <p>998 95 195-16-10
+                        998 71 201-02-72
+                    </p>
+                </a>
+
+            </div>' class="btn mt-3 fond_page btn-success" type="button">Жамгарма алокалари</button>
+                    <button value='<div style="border-radius: 10px;border: 1px solid #3CB68A" class="w-100 p-4"><h5>Саволингизни ёзинг</h5>
+   <div class="row">
+       <div class="col-lg-6">
+           <input class="form-control mt-3" type="text" placeholder="Savol">
+           <input class="form-control mt-3" type="text" placeholder="Телефон ракамингиз">
+           <input class="form-control mt-3" type="text" placeholder="Электрон манзилингиз">
+           <input class="form-control mt-3 btn btn-success" type="submit" value="Хабар юборинг" placeholder="Savol">
+       </div>
+       <div class="col-lg-6">
+           <textarea class="form-control mt-3"  name="" id="" placeholder="Саволингиз" cols="20" rows="8"></textarea>
+       </div>
+   </div>
+</div>' class="btn mt-3 fond_page btn-success" type="button">Савол бермок</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h1 class="title mt-3">News</h1>
+            <div class="w-100 my-2" style="border: 2px solid #3CB68A"></div>
+            <div id="content">
+        </div>
+    </div>
+</div>
+</div>
+
+
+<section class="footer">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                    <img src="images/logofooter.svg" alt="">
+                </a>
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Муқаддас қадамжо ва зиёратгоҳлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Зиёрат одоби</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mt-5 pt-5">
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mt-2">
+                <ul class="nav mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Telegram.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Facebook.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Twitter.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/Instagram.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/OK.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-1" href="#"><img src="images/VK.svg" alt=""></a>
+                    </li>
+                </ul>
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">
+                    <p>
+                        100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.
+                    </p>
+                </a>
+                <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;">
+                    <p>998 95 195-16-10
+                        998 71 201-02-72
+                    </p>
+                </a>
+
+            </div>
+            <div class="col-12 text-center">
+                <p class="text-white">Маълумотлардан фойдаланилганда www.vaqf.uz га ҳавола кўрсатилиши шарт</p>
+                <p class="text-white">©“Вақф” Барча ҳуқуқлар ҳимояланган 2018-2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer-mobile d-none">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                    <img height="100px" src="images/logofooter.svg" alt="">
+                </a>
+                <div class="mt-2">
+                    <ul class="nav mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Telegram.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Facebook.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Twitter.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/Instagram.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/OK.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-1" href="#"><img src="images/VK.svg" alt=""></a>
+                        </li>
+                    </ul>
+                    <a class="nav-link mt-5 text-white p-1" href="#" style="width: 218px;">100069, Тошкент шаҳар, Олмазор туман, Чилтўғон 4-тор кўча 16Б уй.</a>
+                    <a class="nav-link mt-5 text-white p-1" href="#" style="width: 155px;"> 998 95 195-16-10
+                        998 71 201-02-72
+                    </a>
+
+                </div>
+                <div class="border mt-3 w-100"></div>
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Муқаддас қадамжо ва зиёратгоҳлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Зиёрат одоби</p></a>
+                    </li>
+                </ul>
+                <div class="border mt-3 w-100"></div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Молиявий ибодатлар</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Хисобот</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Закот хисоблагич</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Кўнгилли бўл</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white pl-0" href="#"><p class="font-family-bold">Лойиҳалар</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 text-center">
+                <p class="text-white">Маълумотлардан фойдаланилганда www.vaqf.uz га ҳавола кўрсатилиши шарт</p>
+                <p class="text-white">©“Вақф” Барча ҳуқуқлар ҳимояланган 2018-2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="proactive py-2 text-center">
+    <a href="" class="text-white">Proactive Mediaда ишлаб чикилган</a>
+</section>
+<button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroll_div"><span class="fa fa-angle-up"></span></div></button>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/js/7-2-2.js"></script>
+<script src="script.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script>
+    function handleClick(event) {
+        if (event.target.tagName !== "BUTTON") {
+            return;
+        }
+        let a = document.querySelectorAll('.fond_page');
+        a.forEach(element => {
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+        });
+        event.target.style.backgroundColor = "#3CB68A";
+        event.target.style.color = "white";
+        let buttonValue = event.target.value;
+        let title = event.target.textContent;
+        document.querySelector("#content").innerHTML = buttonValue;
+        document.querySelector(".title").innerText = title;
+    }
+    document.querySelector(".buttons").addEventListener("click", handleClick);
+</script>
+</body>
+</html>

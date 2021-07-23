@@ -73,7 +73,7 @@
     padding: 0 80px 0 20px;
     border-radius: 10px;
     border: 1px solid #3CB68A;
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
     z-index: 5;
     font-weight: bolder;

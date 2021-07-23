@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>news</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
@@ -15,8 +16,14 @@
     <link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <!--    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/css/7-2-2.css">-->
 </head>
-<body>
+<body class="bg-white">
+
+
+
 <section class="header">
     <div class="shadow">
         <nav class="navbar container navbar-expand-lg navbar-light p-0">
@@ -59,17 +66,19 @@
         <div class="navbar navbar-expand">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
+                    <a class="nav-link" href="fond-haqida.html"><h4 class="color_text font-weight-bold ">Фонд хакида</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="xayriya-page.html"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>                </li>
+                    <a class="nav-link" href="xayriya-page.html"><h4 class="color_text font-weight-bold ">Хайрия акциялари</h4></a>
+                </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="yangiliklar-page.html"><h4 class="color_text font-weight-bold ">Янгиликлар</h4></a>                </li>
+                    <a class="nav-link" href="yangiliklar-page.html"><h4 class="color_text font-weight-bold ">Янгиликлар</h4></a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Маколалар</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><h4 class="color_text font-weight-bold ">Фотолар</h4></a>
+                    <a class="nav-link" href="photo-page.html"><h4 class="color_text font-weight-bold ">Фотолар</h4></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="video-page.html"><h4 class="color_text font-weight-bold ">Видеолар</h4></a>
@@ -84,16 +93,22 @@
 </section>
 <section class="header_mobile d-none">
     <nav class="navbar container navbar-expand-lg navbar-light">
-        <button id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
-            <div class="span p-1" style="font-size: 25px"><img width="25px" src="image/img.png" alt=""></div>
+        <button style="height: 50px;width: 50px;display: flex;align-items: center;justify-content: center;border: 1px solid #3CB68A;border-radius: 8px;outline: none" id="toggle" class="navbar-toggler" onclick="mobile_toggle()" type="button">
+            <div class="span p-1" ><img width="25px" src="image/img.png" alt=""></div>
         </button>
         <a class="navbar-brand p-0 d-flex align-items-center" href="#">
             <img width="200px" src="images/Logo.svg" alt="">
         </a>
-        <div class="container search-input">
-            <div>
-                <input type="text" placeholder="Search...">
-                <div class="search"></div>
+        <div>
+            <div class="open-btn d-none"></div>
+            <div id="search-wrap" class="d-none">
+                <div class="close-btn"><span></span><span></span></div>
+                <div class="search-area">
+                    <form role="search" method="get" action="">
+                        <input type="text" value="" name="" id="search-text" placeholder="search">
+                        <input type="submit" id="searchsubmit" value="">
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
@@ -128,14 +143,13 @@
         </div>
     </div>
 </section>
-
 <section class="News">
     <h1 class="text-center my-5">Янгиликлар</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 mt-4 col-sm-12">
                 <div style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                    <img class="card_img" src="image/newsimg.png" alt="">
+                    <a href="news_item.html"><img class="card_img" src="image/newsimg.png" alt=""></a>
                     <div class="d-flex pl-4 pr-4 pt-2  justify-content-between align-items-center">
                         <div class="d-flex">
                             <img src="images/time_icon.svg" alt="">
@@ -361,10 +375,6 @@
             <div class="col-md-4">
                 <a class="navbar-brand p-0 d-flex align-items-center" href="#">
                     <img height="100px" src="images/logofooter.svg" alt="">
-                    <div class="ml-1">
-                        <h2 class="font-weight-bold text-white logo2 mb-0">VAQF</h2>
-                        <p class="mb-0 text-white logo">ХАЙРИЯ ЖАМОАТ ФОНДИ</p>
-                    </div>
                 </a>
                 <div class="mt-2">
                     <ul class="nav mt-4">
@@ -451,6 +461,17 @@
 </section>
 <button class="scroll" onclick="topFunction()" id="myBtn"  title="Go to top"><div class="scroll_div"><span class="fa fa-angle-up"></span></div></button>
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+<script>
+    lightGallery(document.getElementById('gallery'), {
+        animateThumb: true,
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-2/js/7-2-2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="owl.carousel.min.js"></script>
 <script src="script.js"></script>

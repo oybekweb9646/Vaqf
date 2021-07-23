@@ -211,12 +211,24 @@ $(".open-btn").click(function () {
     $('#search-text').focus();//テキスト入力のinputにフォーカス
 });
 
-//閉じるボタンを押した時には
+
 $(".close-btn").click(function () {
     $("#search-wrap").removeClass('panelactive');//#search-wrapからpanelactiveクラスを除去
 });
 
 
-
-
-Resources
+function online() {
+    document.getElementById('online').style.backgroundColor = '#3CB68A';
+    document.getElementById('other').style.backgroundColor = 'white';
+    document.querySelector('.online-xayriya').classList.remove('d-none')
+    document.querySelector('.boshqa_usul').classList.add('d-none')
+}
+function other() {
+    document.getElementById('other').style.backgroundColor = '#3CB68A';
+    document.getElementById('online').style.backgroundColor = 'white';
+    document.querySelector('.online-xayriya').classList.add('d-none')
+    document.querySelector('.boshqa_usul').classList.remove('d-none');
+}
+lightGallery(document.getElementById('gallery'), {
+    animateThumb: true,
+});
