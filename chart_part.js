@@ -1,8 +1,4 @@
 var oilCanvas = document.getElementById("oilChart");
-
-
-
-
 var oilData = {
     labels: [
         "Saudi Arabia",
@@ -25,7 +21,6 @@ var oilData = {
             ],
         }]
 };
-
 var pieChart = new Chart(oilCanvas, {
         type: 'doughnut',
         data: oilData,
@@ -44,7 +39,6 @@ var pieChart = new Chart(oilCanvas, {
         }
     }
 );
-
 $('#owl-demo').owlCarousel({
     loop:true,
     margin:10,
@@ -62,8 +56,6 @@ $('#owl-demo').owlCarousel({
         }
     }
 })
-
-
 $('#owl-carousel').owlCarousel({
     loop:true,
     animateOut: 'fadeOut',
@@ -90,3 +82,6 @@ $(document).ready(function () {
         time: 1500
     })
 })
+lightGallery(document.getElementById('gallery'), {
+    animateThumb: true,
+});
