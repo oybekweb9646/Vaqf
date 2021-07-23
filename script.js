@@ -13,45 +13,7 @@ function searchMobile () {
         document.getElementById('button_mobile').innerHTML = '<img width="20px" src="image/search.png" alt="">';
     }
 }
-// const body = document.querySelector('body');
-// const searchBtn = document.querySelector('#search');
-// const searchInput = document.querySelector('#search-input');
-// let active = false;
-//
-// document.getElementById('search-btn').addEventListener('click', (e) => {
-//         if(!active) {
-//             searchBtn.classList.add('active');
-//             searchInput.classList.add('active');
-//             document.getElementById('search-btn').innerHTML = '&#x2715;';
-//             active = true;
-//             searchInput.focus();
-//         }
-//      else {
-//         searchBtn.classList.remove('active');
-//         searchInput.classList.remove('active');
-//             document.getElementById('search-btn').innerHTML = '<img width="20px" src="image/search.png" alt="">';
-//         searchInput.value = '';
-//         active = false;
-//     }
-// });
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let mobile_is = false;
-
 function mobile_toggle () {
     mobile_is = !mobile_is;
     if (mobile_is === true) {
@@ -65,42 +27,6 @@ function mobile_toggle () {
 
     }
 }
-
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 20,
-        time: 1500
-    })
-})
-
-$('#owl-carousel').owlCarousel({
-    loop:true,
-    animateOut: 'fadeOut',
-    margin:10,
-    autoplay: false,
-    nav:true,
-    items: 1,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-});
-
-
-
-
-
-
-// Developed at agap2
-// Based on:
-// http://www.codeply.com/go/s3I9ivCBYH/multi-carousel-single-slide-bootstrap-4
 
 $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
     let $e = $(e.relatedTarget),
@@ -116,15 +42,8 @@ $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
         }
     }
 });
-
-
-
-//Get the button:
 mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -132,91 +51,17 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTo({top: 0, behavior: "smooth"}); // For Safari
-    document.documentElement.scrollTo({top: 0, behavior: "smooth"}); // For Chrome, Firefox, IE and Opera
+    document.body.scrollTo({top: 0, behavior: "smooth"});
+    document.documentElement.scrollTo({top: 0, behavior: "smooth"});
 }
-
-
-
-var oilCanvas = document.getElementById("oilChart");
-
-
-
-
-var oilData = {
-    labels: [
-        "Saudi Arabia",
-        "Russia",
-        "Iraq",
-        "United Arab Emirates",
-        "Canada",
-        "kjkjk"
-    ],
-    datasets: [
-        {
-            data: [90, 86.2, 52.2, 51.2, 50.2, 30],
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)',
-                'rgb(255, 210, 132)',
-                'rgb(210, 162, 235)',
-                'rgb(255, 20, 86)'
-            ],
-        }]
-};
-
-var pieChart = new Chart(oilCanvas, {
-    type: 'doughnut',
-    data: oilData,
-    responsive: true,
-    options: {
-        responsive: true,
-        legend: {
-            display: false,
-            responsive: true,
-            position: "right",
-            labels: {
-                fontColor: "#333",
-                fontSize: 20,
-                paddingTop: 50,
-            }},
-    }
-}
-);
-
-$('#owl-demo').owlCarousel({
-    loop:true,
-    margin:10,
-    nav: true,
-    dots: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        700:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
 $(".open-btn").click(function () {
-    $("#search-wrap").addClass('panelactive');//#search-wrapへpanelactiveクラスを付与
-    $('#search-text').focus();//テキスト入力のinputにフォーカス
+    $("#search-wrap").addClass('panelactive');
+    $('#search-text').focus();
 });
-
-
 $(".close-btn").click(function () {
-    $("#search-wrap").removeClass('panelactive');//#search-wrapからpanelactiveクラスを除去
+    $("#search-wrap").removeClass('panelactive');
 });
-
-
 function online() {
     document.getElementById('online').style.backgroundColor = '#3CB68A';
     document.getElementById('other').style.backgroundColor = 'white';
@@ -229,6 +74,3 @@ function other() {
     document.querySelector('.online-xayriya').classList.add('d-none')
     document.querySelector('.boshqa_usul').classList.remove('d-none');
 }
-lightGallery(document.getElementById('gallery'), {
-    animateThumb: true,
-});
