@@ -74,3 +74,24 @@ function other() {
     document.querySelector('.online-xayriya').classList.add('d-none')
     document.querySelector('.boshqa_usul').classList.remove('d-none');
 }
+
+let isOpen = false;
+    $("#button").click(function() {
+        isOpen = !isOpen
+        if (isOpen === true) {
+            $('#btn_uz').html("uzbek");
+
+            $('#eng').html("english");
+            $('#rus').html("ruscha");
+            $('#uz').html("uzbek");
+        }
+        else{
+            $('#btn_uz').html("");
+            $('#eng').html("eng");
+            $('#rus').html("rus");
+            $('#uz').html("uz");
+        }
+        $('#span').toggleClass('d-none');
+        $('.test').toggleClass('test-1');
+        $('#drop').toggleClass('test-1');
+    });
