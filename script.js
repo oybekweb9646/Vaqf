@@ -95,3 +95,24 @@ let isOpen = false;
         $('.test').toggleClass('test-1');
         $('#drop').toggleClass('test-1');
     });
+
+$('#owl-modal').owlCarousel({
+    loop:true,
+    margin:10,
+    nav: true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        700:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+lightGallery(document.getElementById('gallery'), {
+    animateThumb: true,
+});

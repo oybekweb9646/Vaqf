@@ -57,7 +57,7 @@ footer {
 
  .owl-nav button span {
     font-size: 50px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
  .owl-nav button {
     position: absolute;
@@ -122,7 +122,7 @@ footer {
     height: 50px!important;
     width: 50px;!important;
     border-radius: 50%!important;
-    background-color: #3cb68a!important;
+    background-color: #fff!important;
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
