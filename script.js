@@ -79,21 +79,23 @@ let isOpen = false;
     $("#button").click(function() {
         isOpen = !isOpen
         if (isOpen === true) {
-            $('#btn_uz').html("uzbek");
-
+            $('#button').html("uzbek");
             $('#eng').html("english");
             $('#rus').html("ruscha");
             $('#uz').html("uzbek");
         }
         else{
-            $('#btn_uz').html("");
+            $('#button').html("uz");
             $('#eng').html("eng");
             $('#rus').html("rus");
             $('#uz').html("uz");
         }
         $('#span').toggleClass('d-none');
-        $('.test').toggleClass('test-1');
-        $('#drop').toggleClass('test-1');
+        $('#button').toggleClass('test-1');
+        $('#drop').toggleClass('drop1');
+        $('#eng').toggleClass('link1');
+        $('#rus').toggleClass('link1');
+        $('#uz').toggleClass('link1');
     });
 
 $('#owl-modal').owlCarousel({

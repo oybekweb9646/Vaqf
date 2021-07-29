@@ -79,7 +79,13 @@ button{
     width: 100%;
 }
 .drop {
-    min-width: 100%!important;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    border-radius: 5px;
+    height: 0;
 }
 .input_tolov:focus {
     box-shadow:  inset 0 0 0 1px #3CB68A, 0 0 3px 1px #3CB68A;;
@@ -153,7 +159,9 @@ button{
         flex-direction: unset;
     }
     .drop {
-        position: absolute!important;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 }
 
@@ -858,15 +866,42 @@ body {
 }
 
 .test{
-    transition: all 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .test-1{
     width: 100px;
     border: 1px solid #3CB68A;
 }
-.test span{
-    transition: all 0.5s ease;
+.drop{
+    z-index: 5;
+    transition: 0.5s;
+    transition-delay: 1s;
 }
+.linkone{
+    transition: 0.5s;
+    transition-delay: 2s;
+}
+.links{
+    height: 0;
+    display: none;
+    width: 0;
+}
+.links:hover{
+    background-color: #3CB68A;
+}
+.link1{
+    display: block;
+    height: 33%;
+    color: #000;
+    width: 100%;
+    text-align: center;
+}
+.drop1{
+    display: block;
+    border: 1px solid #3CB68A;
+    height: 5rem;
+}
+
 
 
