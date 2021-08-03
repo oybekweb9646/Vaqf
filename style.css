@@ -565,9 +565,7 @@ button{
         margin-top: 70px;
     }
 }
-@media (min-width: 1330px) {
 
-}
 
 @media (max-width: 992px) and (min-width: 768px){
 
@@ -878,14 +876,10 @@ body {
     transition: 0.5s;
     transition-delay: 1s;
 }
-.linkone{
-    transition: 0.5s;
-    transition-delay: 2s;
-}
 .links{
-    height: 0;
-    display: none;
-    width: 0;
+    /*height: 0;*/
+    /*display: none;*/
+    opacity: 0;
 }
 .links:hover{
     background-color: #3CB68A;
@@ -894,13 +888,44 @@ body {
     display: block;
     height: 33%;
     color: #000;
-    width: 100%;
     text-align: center;
+    opacity: 1;
 }
 .drop1{
     display: block;
     border: 1px solid #3CB68A;
     height: 5rem;
+}
+.date{
+    border: 1px solid #3CB68A;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 300px;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+}
+
+@media (max-width: 992px) {
+.chart_page{
+    display: none;
+}
+    .chart_page_mobile{
+        display: block!important;
+    }
+}
+th, tr, td{
+    border: 1px solid #3CB68A!important;
+    background: #FCFCFC;
+}
+thead{
+    border-radius: 20px!important;
+}
+@media (max-width: 992px) {
+.table{
+    overflow-x: scroll;
+    margin-right: 10px;
+}
 }
 
 

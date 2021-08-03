@@ -35,10 +35,12 @@ var pieChart = new Chart(oilCanvas, {
                     fontColor: "#333",
                     fontSize: 20,
                     paddingTop: 50,
-                }},
+                }
+            },
         }
     }
 );
+
 $('#owl-demo').owlCarousel({
     loop:true,
     margin:10,
@@ -85,3 +87,4 @@ $(document).ready(function () {
 lightGallery(document.getElementById('gallery'), {
     animateThumb: true,
 });
+
