@@ -65,13 +65,17 @@ $(".close-btn").click(function () {
 function online() {
     document.getElementById('online').style.backgroundColor = '#3CB68A';
     document.getElementById('other').style.backgroundColor = 'white';
+    document.getElementById('other').style.color = 'black';
     document.querySelector('.online-xayriya').classList.remove('d-none')
     document.querySelector('.boshqa_usul').classList.add('d-none')
+    document.getElementById('online').classList.add('text-white');
 }
 function other() {
     document.getElementById('other').style.backgroundColor = '#3CB68A';
+    document.getElementById('other').style.color = 'white';
     document.getElementById('online').style.backgroundColor = 'white';
-    document.querySelector('.online-xayriya').classList.add('d-none')
+    document.getElementById('online').classList.remove('text-white');
+    document.querySelector('.online-xayriya').classList.add('d-none');
     document.querySelector('.boshqa_usul').classList.remove('d-none');
 }
 
