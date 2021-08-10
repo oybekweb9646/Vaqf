@@ -510,6 +510,11 @@ button{
     max-width: 100%;
     padding: 8vw;
 }
+@media (max-width: 558px) {
+.owl-nav{
+    display: none;
+}
+}
 @media (max-width: 768px) {
 .footer {
     display: none;
@@ -1024,6 +1029,7 @@ thead{
         transform: translateX(0px);
     }
 }
+
 
 #owl-modal .owl-nav{
     margin-top: 0!important;

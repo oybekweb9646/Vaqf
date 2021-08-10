@@ -1,23 +1,23 @@
 
- .owl-dots .owl-dot {
+.owl-dots .owl-dot {
     outline: none!important;
 }
-.one .owl-dots {
+.owl-dots {
     margin-top: -100px!important;
     position: absolute;
     margin-left: calc(50% - 54px);
 }
-.one .owl-dots .owl-dot span {
+.owl-dots .owl-dot span {
     background-color: white!important;
     width: 20px!important;
     height: 20px!important;
     margin: 3px!important;
 }
-.one .owl-dots .active span {
+.owl-dots .active span {
     background-color: white!important;
 
 }
-.one .owl-dots .active {
+.owl-dots .active {
     border-radius: 50%;
     border: 2px solid #fff !important;
 }
